@@ -8,11 +8,39 @@ var todoApp = angular.module('todo', ['ionic'])
 
 
 
-todoApp.controller('TodoCtrl', ['$scope', function ($scope) {
-  $scope.tasks = [
-    {title: 'Collect coins'},
-    {title: 'Eat mushrooms'},
-    {title: 'Get high enough to grab the flag'},
-    {title: 'Find the princess'}
-  ];
+todoApp.controller('TodoCtrl', ['$scope', '$ionicModal', function ($scope, $ionicModal) {
+  
+  //Some test data
+  $scope.tasks = [];
+  //Create the task and load the modal.
+  
+  //fromTemplate Method takes three arguments
+  //the function loads the modal into the scope
+  //we then set the modal scope the root $scope
+  //and the animation for the modal to slide up.
+  $ionicModal.fromTemplateUrl('new-task.html', function (modal) {
+    $scope.taskModal = modal
+  }, {
+    scope: $scope,
+    animation: 'slide-in-up'
+  });
+  //called when the form is submitted
+  $scope.createTask = function (task) {
+    $scope.tasks.push({
+      title: task.title
+    });
+    $scope.taskModal.hide();
+    task.title = "";
+  };
+
+  //Open the new task modal.
+  $scope.newTask = function () {
+    $scope.taskModal.show();
+  }
+  
+  //Close the new task modal
+  $scope.closeNewTask = function () {
+    $scope.taskModal.hide();
+  }
 }]);
+
