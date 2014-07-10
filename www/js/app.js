@@ -60,7 +60,7 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
   //Called to collect the given project.
   $scope.selectProject = function (project, index) {
     $scope.activeProject = project;
-    Projects.setLastAciveIndex(index);
+    Projects.setLastActiveIndex(index);
     $ionicSideMenuDelegate.toggleLeft(false);
   };
 
@@ -83,6 +83,7 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
     if (!$scope.activeProject || !task) {
       return;
     }
+    console.log($scope.activeProject);
     $scope.activeProject.tasks.push({
       title: task.title
     })
