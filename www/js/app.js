@@ -1,3 +1,4 @@
+'use strict';
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -39,7 +40,7 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
   var createProject = function (projectTitle) {
     var newProject = Projects.newProject(projectTitle);
     $scope.projects.push(newProject);
-    Projects.save($scope.projects)
+    Projects.save($scope.projects);
     $scope.selectProject(newProject, $scope.projects.length-1);
   };
 
@@ -71,7 +72,7 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
   //we then set the modal scope the root $scope
   //and the animation for the modal to slide up.
   $ionicModal.fromTemplateUrl('new-task.html', function (modal) {
-    $scope.taskModal = modal
+    $scope.taskModal = modal;
   }, {
     scope: $scope,
     animation: 'slide-in-up'
@@ -86,13 +87,13 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
     console.log($scope.activeProject);
     $scope.activeProject.tasks.push({
       title: task.title
-    })
+    });
     $scope.taskModal.hide();
     
     //Inefficient but saves all projects
     Projects.save($scope.projects);
     
-    task.title = "";
+    task.title = '';
   };
 
   //Open the new task modal.
@@ -108,9 +109,9 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
   $scope.toggleProjects = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
-
+  
   $timeout(function () {
-    if ($scope.projects.length == 0) {
+    if ($scope.projects.length === 0) {
       while (true) {
         var projectTitle = prompt('Your first project title: ');
         if (projectTitle) {
@@ -122,25 +123,5 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
   });
 
 }]);
-
-
 //Try to create the first project, make sure to differ this.
 //By using the $timeout so everything is initialised properly.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
