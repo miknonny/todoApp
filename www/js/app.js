@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-var todoApp = angular.module('todo', ['ionic'])
+var todoApp = angular.module('todo', ['ionic']);
 
 todoApp.factory('Projects', function () {
   return {
@@ -27,7 +27,7 @@ todoApp.factory('Projects', function () {
     getLastActiveIndex: function () {
       return parseInt(window.localStorage['lastActiveProject'] || 0);
     },
-    setLastActiveindex: function (index) {
+    setLastActiveIndex: function (index) {
       window.localStorage['lastActiveProject'] = index;
     } 
   };
