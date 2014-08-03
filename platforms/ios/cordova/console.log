@@ -54,3 +54,15 @@
 2014-07-08 12:11:26.577 HelloCordova[7248:90b] [CDVTimer][TotalPluginStartup] 1.833975ms
 2014-07-08 12:11:26.639 HelloCordova[7248:90b] Resetting plugins due to page load.
 2014-07-08 12:11:26.837 HelloCordova[7248:90b] Finished load of: file:///Users/nonnycode/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/204253C5-607B-48E7-8893-5335A3D79F18/HelloCordova.app/www/index.html
+2014-07-20 06:21:01.010 HelloCordova[6500:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-20 06:21:01.036 HelloCordova[6500:70b] Unlimited access to network resources
+2014-07-20 06:21:01.228 HelloCordova[6500:70b] [CDVTimer][keyboard] 0.093997ms
+2014-07-20 06:21:01.229 HelloCordova[6500:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-20 06:21:01.229 HelloCordova[6500:70b] [CDVTimer][statusbar] 0.501037ms
+2014-07-20 06:21:01.230 HelloCordova[6500:70b] [CDVTimer][TotalPluginStartup] 1.883030ms
+2014-07-20 06:21:01.388 HelloCordova[6500:70b] Resetting plugins due to page load.
+2014-07-20 06:22:01.272 HelloCordova[6500:3f03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-07-20 06:22:01.323 HelloCordova[6500:70b] Finished load of: file:///Users/nonnycode/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/204253C5-607B-48E7-8893-5335A3D79F18/HelloCordova.app/www/index.html
+2014-07-20 06:22:12.945 HelloCordova[6500:70b] {"title":"MONITOR SETUP","tasks":[],"$$hashKey":"00A"}
+2014-07-20 06:22:21.608 HelloCordova[6500:70b] {"title":"MONITOR SETUP","tasks":[{"title":"TESTING IF THIS THING WORKS","$$hashKey":"00D"}],"$$hashKey":"00A"}
+Terminating in response to SpringBoard's termination.

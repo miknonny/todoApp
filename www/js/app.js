@@ -34,8 +34,9 @@ todoApp.factory('Projects', function () {
   };
 });
 
-todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects', '$ionicSideMenuDelegate', function ($scope, $timeout, $ionicModal, Projects, $ionicSideMenuDelegate) {
-  
+todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects', 
+'$ionicSideMenuDelegate', function ($scope, $timeout, $ionicModal, Projects, $ionicSideMenuDelegate) {
+
   //A Utility function for creating a new project with given projectTitle.
   var createProject = function (projectTitle) {
     var newProject = Projects.newProject(projectTitle);
@@ -46,6 +47,8 @@ todoApp.controller('TodoCtrl', ['$scope', '$timeout', '$ionicModal', 'Projects',
 
   //Loads or initialise projects
   $scope.projects = Projects.all();
+
+  $scope.name = 'hello';
 
   //Grab the last active or the first project
   $scope.activeProject = $scope.projects[Projects.getLastActiveIndex()];
